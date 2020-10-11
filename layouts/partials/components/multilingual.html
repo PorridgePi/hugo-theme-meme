@@ -2,24 +2,21 @@
     {{- $hide := or (and .IsHome .Site.Params.hideLangToggleInHome) (and (not .IsHome) (and .Site.Params.autoHideLangToggle (not .IsTranslated))) -}}
     {{- if not $hide -}}
         <div id="lang-switcher">
-            <span>{{ .Site.Language.LanguageName }}</span>
             {{ if .IsTranslated }}
-                <ul id="langs">
-                    {{ range .Translations }}
-                        <li><a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
-                    {{ end }}
-                </ul>
+                {{ range .Translations }}
+                        <a rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a>
+                {{ end }}
+                
             {{ else }}
                 {{ if not .Site.Params.autoHideLangToggle }}
-                    <ul id="langs">
-                        {{ range .Site.Languages }}
-                            {{ if ne $.Site.Language.Lang .Lang }}
-                                <li><a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
-                            {{ end }}
+                    
+                    {{ range .Site.Languages }}
+                        {{ if ne $.Site.Language.Lang .Lang }}
+                            <a rel="alternate" href="{{ .Lang | relURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a>
                         {{ end }}
-                    </ul>
+                    {{ end }}
+                    
                 {{ end }}
             {{ end }}
-        </div>
     {{- end -}}
 {{- end -}}
