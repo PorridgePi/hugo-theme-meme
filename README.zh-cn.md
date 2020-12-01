@@ -1,4 +1,5 @@
 简体中文 |
+[繁體中文](https://github.com/porridgepi/hugo-theme-meme/blob/master/README.zh-tw.md) |
 [English](https://github.com/porridgepi/hugo-theme-meme/blob/master/README.md)
 
 <div align="center"><img src="https://raw.githubusercontent.com/porridgepi/hugo-theme-meme/master/static/icons/apple-touch-icon.png" /></div>
