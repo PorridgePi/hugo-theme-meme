@@ -25,6 +25,12 @@
     $headerLayoutFlex: false;
 {{ end }}
 
+{{ if .Site.Params.enableHeaderAutoHide }}
+    $enableHeaderAutoHide: true;
+{{ else }}
+    $enableHeaderAutoHide: false;
+{{ end }}
+
 {{ if .Site.Params.enableNavToggle }}
     $enableNavToggle: true;
 
@@ -33,6 +39,12 @@
     {{ end }}
 {{ else }}
     $enableNavToggle: false;
+{{ end }}
+
+{{ if .Site.Params.displayBackToTopOnMobile }}
+    $displayBackToTopOnMobile: true;
+{{ else }}
+    $displayBackToTopOnMobile: false;
 {{ end }}
 
 {{ if .Site.Params.enableOverflowY }}
@@ -62,6 +74,8 @@
 {{ else }}
     $enableSmoothScroll: false;
 {{ end }}
+
+$baseRelURL: "{{ strings.TrimSuffix (.Site.BaseURL | relURL) "/" }}";
 
 
 // Utilities

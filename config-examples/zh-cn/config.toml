@@ -231,6 +231,10 @@ uglyURLs = false
     # 是否开启
     enableHeader = true
 
+    # 是否自动隐藏
+    enableHeaderAutoHide = false
+    # 说明：仅对弹性布局的顶栏有效
+
     # 是否在首页显示
     displayHeaderInHome = true
     # 说明：对弹性布局的顶栏无效
@@ -773,8 +777,10 @@ uglyURLs = false
     ######################################
     # 分节标题锚点
 
-    # 是否开启
+    # 是否开启（全局设置）
     enableHeadingsAnchor = true
+    # 说明：文章的 Front Matter 中的 `anchor`
+    #      的优先级高于此处
 
     # 分节标题的级别范围
     headingsOpt = "1-6"
@@ -1153,6 +1159,9 @@ uglyURLs = false
 
     # 是否在首页显示
     displayBackToTopInHome = true
+
+    # 是否在移动端显示
+    displayBackToTopOnMobile = false
 
     # 按钮图标
     backToTopIcon = "arrow-up"

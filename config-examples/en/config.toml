@@ -243,6 +243,9 @@ uglyURLs = false
 
     enableHeader = true
 
+    enableHeaderAutoHide = false
+    # Note: works for header layout flex only
+
     displayHeaderInHome = true
     # Note: invalid for header layout flex
 
@@ -817,6 +820,9 @@ uglyURLs = false
     # Headings Anchor
 
     enableHeadingsAnchor = true
+    # Note: *global settings*
+    #       `anchor` in post’s Front Matter
+    #       has a higher priority than here
 
     # Level range of headings
     headingsOpt = "1-6"
@@ -1191,6 +1197,8 @@ uglyURLs = false
     enableBackToTopAutoHide = true
 
     displayBackToTopInHome = true
+
+    displayBackToTopOnMobile = false
 
     backToTopIcon = "arrow-up"
 
