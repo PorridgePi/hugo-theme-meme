@@ -52,6 +52,7 @@ For users of other systems, see: https://gohugo.io/getting-started/installing/
 ### Blogging
 
 1. Replace `config.toml` with [config examples](https://github.com/porridgepi/hugo-theme-meme/blob/master/config-examples/en/config.toml).
+
    ```sh
    ~/blog $ rm config.toml && cp themes/meme/config-examples/en/config.toml config.toml
    ```

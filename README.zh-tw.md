@@ -52,6 +52,7 @@ https://gohugo.io/getting-started/quick-start/
 ### 開始寫作
 
 1. 將 `config.toml` 替換為[示例配置](https://github.com/porridgepi/hugo-theme-meme/blob/master/config-examples/zh-cn/config.toml)。
+
    ```sh
    ~/blog $ rm config.toml && cp themes/meme/config-examples/zh-cn/config.toml config.toml
    ```
